@@ -1,15 +1,17 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function ContactSection() {
+	const { t } = useLanguage();
 	return (
 		<section className="py-20 px-4">
 			<div className="max-w-4xl mx-auto text-center">
 				<motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-8">
-					<h2 className="text-3xl font-bold">Let&apos;s Build Something Amazing</h2>
+					<h2 className="text-3xl font-bold">{t('contact.title')}</h2>
 					<p className="text-gray-400 max-w-2xl mx-auto">
-						Looking for a full-stack developer who can architect and implement complete solutions? Let&apos;s discuss your project.
+						{t('contact.description')}
 					</p>
 
 					{/* Location */}
@@ -23,7 +25,7 @@ export default function ContactSection() {
 							/>
 							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
 						</svg>
-						<span>Tandil, Argentina, UTC-03</span>
+						<span>{t('contact.location')}</span>
 					</div>
 
 					{/* Contact Buttons */}
@@ -36,7 +38,7 @@ export default function ContactSection() {
 								<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
 								<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
 							</svg>
-							Get in Touch
+							{t('contact.email')}
 						</a>
 						<a
 							href="https://assets.bollatialfredo.com/resume.pdf"
@@ -51,7 +53,7 @@ export default function ContactSection() {
 								/>
 								<path fillRule="evenodd" d="M8 11a1 1 0 100 2h4a1 1 0 100-2H8zm0-4a1 1 0 100 2h4a1 1 0 100-2H8z" clipRule="evenodd" />
 							</svg>
-							View Resume
+							{t('contact.resume')}
 						</a>
 					</div>
 

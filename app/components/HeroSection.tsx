@@ -2,9 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function HeroSection() {
 	const [selectedStack, setSelectedStack] = useState<'frontend' | 'backend' | 'devops' | null>(null);
+	const { t } = useLanguage();
 
 	return (
 		<section className="min-h-screen relative overflow-hidden py-24 md:py-0">
@@ -16,14 +18,14 @@ export default function HeroSection() {
 				<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8 md:mb-12">
 					<div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
 						<h1 className="text-4xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-500">
-							Alfredo Bollati
+							{t('hero.name')}
 						</h1>
-						<h2 className="text-2xl md:text-4xl font-bold text-white">Full Stack Developer</h2>
+						<h2 className="text-2xl md:text-4xl font-bold text-white">{t('hero.title')}</h2>
 						<p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
-							With over eight years of software development experience, I architect and deliver end-to-end, scalable solutions while leading high-performing development teams.
+							{t('hero.description')}
 						</p>
 						<p className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto">
-							Senior <span className="text-blue-400">Full Stack Developer</span> 
+							Senior <span className="text-blue-400">{t('hero.title')}</span> 
 						</p>
 					</div>
 					<div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-6 md:mb-8">
@@ -53,19 +55,19 @@ export default function HeroSection() {
 								onMouseEnter={() => setSelectedStack('frontend')}
 								onMouseLeave={() => setSelectedStack(null)}
 							>
-								<h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-blue-400">Frontend Development</h3>
+								<h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-blue-400">{t('hero.frontend')}</h3>
 								<ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm text-gray-400">
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
-										Modern React & VueJS Architectures
+										{t('hero.frontend.item1')}
 									</li>
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
-										Performance Optimization
+										{t('hero.frontend.item2')}
 									</li>
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
-										Responsive & Interactive UIs
+										{t('hero.frontend.item3')}
 									</li>
 								</ul>
 							</div>
@@ -78,19 +80,19 @@ export default function HeroSection() {
 								onMouseEnter={() => setSelectedStack('backend')}
 								onMouseLeave={() => setSelectedStack(null)}
 							>
-								<h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-purple-400">Backend Development</h3>
+								<h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-purple-400">{t('hero.backend')}</h3>
 								<ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm text-gray-400">
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
-										API Design & Development
+										{t('hero.backend.item1')}
 									</li>
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
-										Database Architecture
+										{t('hero.backend.item2')}
 									</li>
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
-										Real-time Systems
+										{t('hero.backend.item3')}
 									</li>
 								</ul>
 							</div>
@@ -103,19 +105,19 @@ export default function HeroSection() {
 								onMouseEnter={() => setSelectedStack('devops')}
 								onMouseLeave={() => setSelectedStack(null)}
 							>
-								<h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-teal-400">DevOps & Cloud</h3>
+								<h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-teal-400">{t('hero.devops')}</h3>
 								<ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm text-gray-400">
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-teal-500 rounded-full" />
-										Docker Infrastructure
+										{t('hero.devops.item1')}
 									</li>
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-teal-500 rounded-full" />
-										CI/CD Pipelines
+										{t('hero.devops.item2')}
 									</li>
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-teal-500 rounded-full" />
-										Scalable Architecture
+										{t('hero.devops.item3')}
 									</li>
 								</ul>
 							</div>

@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function ProjectsSection() {
+  const { t } = useLanguage();
   return (
     <section className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
@@ -12,7 +14,7 @@ export default function ProjectsSection() {
           viewport={{ once: true }}
           className="text-3xl font-bold mb-16 text-center"
         >
-          Full Stack Projects
+          {t('projects.title')}
         </motion.h2>
 
         <div className="space-y-16">
@@ -28,74 +30,71 @@ export default function ProjectsSection() {
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-2xl font-bold mb-4">
-                      Sensorpampa IoT Monitoring System
+                      {t('projects.iot.title')}
                     </h3>
                     <p className="text-gray-400">
-                      A robust IoT platform processing and visualizing sensor
-                      readings daily with real-time dashboards and alerts for
-                      critical conditions.
+                      {t('projects.iot.description')}
                     </p>
                   </div>
 
                   <div className="grid grid-cols-2 gap-6">
                     <div>
                       <h4 className="text-sm font-semibold text-blue-400 mb-3">
-                        Frontend Architecture
+                        {t('projects.iot.frontend')}
                       </h4>
                       <ul className="space-y-2 text-sm text-gray-400">
-                        <li> • Vue 3 (&lt;script setup&gt;) with Vite</li>
+                        <li> • {t('projects.iot.frontend.item1')}</li>
                         <li>
-                          • Real-time sensor dashboards via Node.js WebSocket
-                          service
+                          • {t('projects.iot.frontend.item2')}
                         </li>
-                        <li>• PWA with offline data viewing</li>
-                        <li>• Mobile-responsive UI built with Tailwind CSS</li>
+                        <li>• {t('projects.iot.frontend.item3')}</li>
+                        <li>• {t('projects.iot.frontend.item4')}</li>
                       </ul>
                     </div>
                     <div>
                       <h4 className="text-sm font-semibold text-purple-400 mb-3">
-                        Backend Systems
+                        {t('projects.iot.backend')}
                       </h4>
                       <ul className="space-y-2 text-sm text-gray-400">
-                        <li>• Laravel REST API and Admin app</li>
-                        <li>• Node.js WebSocket for real-time updates</li>
-                        <li>• MQTT broker for device communication</li>
-                        <li>• Keycloak authentication</li>
-                        <li>• PostgreSQL primary database</li>
+                        <li>• {t('projects.iot.backend.item1')}</li>
+                        <li>• {t('projects.iot.backend.item2')}</li>
+                        <li>• {t('projects.iot.backend.item3')}</li>
+                        <li>• {t('projects.iot.backend.item4')}</li>
+                        <li>• {t('projects.iot.backend.item5')}</li>
                       </ul>
                     </div>
                   </div>
 
                   <div className="space-y-3">
                     <h4 className="text-sm font-semibold text-red-400">
-                      Infrastructure
+                      {t('projects.iot.infrastructure')}
                     </h4>
                     <ul className="space-y-2 text-sm text-gray-400">
-                      <li>• CI CD pipeline using GitHub Actions</li>
-                      <li>• Auto SSL certificates renewal</li>
-                      <li>• Docker + NGINX load balancing</li>
-                      <li>• VPS hosting</li>
+                      <li>• {t('projects.iot.infrastructure.item1')}</li>
+                      <li>• {t('projects.iot.infrastructure.item2')}</li>
+                      <li>• {t('projects.iot.infrastructure.item3')}</li>
+                      <li>• {t('projects.iot.infrastructure.item4')}</li>
                     </ul>
                   </div>
 
                   <div className="space-y-3">
                     <h4 className="text-sm font-semibold text-teal-400">
-                      Key Achievements
+                      {t('projects.iot.achievements')}
                     </h4>
                     <ul className="space-y-2 text-sm text-gray-400">
                       <li>
-                        • 99.9% uptime using Docker + NGINX load balancing
+                        • {t('projects.iot.achievements.item1')}
                       </li>
-                      <li>• Processing several sensor readings per day</li>
-                      <li>• Data latency reduced to &gt; 500 ms end-to-end</li>
-                      <li>• 30% reduction in infrastructure costs</li>
+                      <li>• {t('projects.iot.achievements.item2')}</li>
+                      <li>• {t('projects.iot.achievements.item3')}</li>
+                      <li>• {t('projects.iot.achievements.item4')}</li>
                     </ul>
                   </div>
                 </div>
 
                 <div className="bg-black/30 rounded-xl p-6">
                   <h4 className="text-sm font-semibold text-gray-400 mb-4">
-                    System Architecture
+                    {t('projects.iot.architecture')}
                   </h4>
                   <div className="aspect-[4/3] bg-black/50 rounded-lg p-4">
                     {/* Add detailed system architecture diagram here */}
@@ -235,7 +234,7 @@ export default function ProjectsSection() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Sensorpampa Landing
+                      {t('projects.iot.landing')}
                     </a>
                   </motion.div>
                   <motion.div>
@@ -245,7 +244,7 @@ export default function ProjectsSection() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Sensorpampa Portal
+                      {t('projects.iot.portal')}
                     </a>
                     <div>user: demo password: demo</div>
                   </motion.div>
@@ -266,18 +265,17 @@ export default function ProjectsSection() {
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-2xl font-bold mb-4">
-                      Full Featured E-commerce Platform
+                      {t('projects.ecommerce.title')}
                     </h3>
                     <p className="text-gray-400">
-                      A store web application with full features built with
-                      Next.js, TypeScript, Tailwind CSS, and Supabase.
+                      {t('projects.ecommerce.description')}
                     </p>
                   </div>
 
                   <div className="grid grid-cols-2 gap-6">
                     <div>
                       <h4 className="text-sm font-semibold text-blue-400 mb-3">
-                        Frontend Stack
+                        {t('projects.ecommerce.frontend')}
                       </h4>
                       <ul className="space-y-2 text-sm text-gray-400">
                         <li>• Next.js</li>
@@ -289,7 +287,7 @@ export default function ProjectsSection() {
                     </div>
                     <div>
                       <h4 className="text-sm font-semibold text-purple-400 mb-3">
-                        Backend Stack
+                        {t('projects.ecommerce.backend')}
                       </h4>
                       <ul className="space-y-2 text-sm text-gray-400">
                         <li>• Next.js API Routes</li>
@@ -302,7 +300,7 @@ export default function ProjectsSection() {
 
                   <div className="space-y-3">
                     <h4 className="text-sm font-semibold text-teal-400">
-                      Devops
+                      {t('projects.ecommerce.devops')}
                     </h4>
                     <ul className="space-y-2 text-sm text-gray-400">
                       <li>• Vercel Deployment</li>
@@ -312,7 +310,7 @@ export default function ProjectsSection() {
 
                 <div className="bg-black/30 rounded-xl p-6">
                   <h4 className="text-sm font-semibold text-gray-400 mb-4">
-                    Project Architecture
+                    {t('projects.ecommerce.architecture')}
                   </h4>
                   <div className="aspect-[4/3] bg-black/50 rounded-lg p-4">
                     <svg className="w-full h-full" viewBox="0 0 500 300">
