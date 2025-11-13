@@ -327,7 +327,7 @@ export default function ProjectsSection() {
                       {/* Database */}
                       <g>
                         <rect x="280" y="120" width="200" height="60" rx="4" className="fill-blue-500/20 stroke-blue-500" strokeWidth="1" />
-                        <text x="380" y="155" textAnchor="middle" className="fill-gray-400 text-[12px]">Database</text>
+                        <text x="380" y="155" textAnchor="middle" className="fill-gray-400 text-[12px]">MySQL Database</text>
                       </g>
 
                       {/* Connections */}
