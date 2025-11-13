@@ -237,6 +237,7 @@ export default function ProjectsSection() {
                       {t('projects.iot.landing')}
                     </a>
                   </motion.div>
+
                   <motion.div>
                     <a
                       className="underline"
@@ -248,6 +249,95 @@ export default function ProjectsSection() {
                     </a>
                     <div>user: demo password: demo</div>
                   </motion.div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Sheepie WhatsApp Chatbot */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-gray-900/50 rounded-xl overflow-hidden border border-gray-800"
+          >
+            <div className="p-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-4">
+                      {t('projects.sheepie.title')}
+                    </h3>
+                    <p className="text-gray-400">
+                      {t('projects.sheepie.description')}
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="text-sm font-semibold text-purple-400 mb-3">
+                        {t('projects.sheepie.backend')}
+                      </h4>
+                      <ul className="space-y-2 text-sm text-gray-400">
+                        <li>• {t('projects.sheepie.backend.item1')}</li>
+                        <li>• {t('projects.sheepie.backend.item2')}</li>
+                        <li>• {t('projects.sheepie.backend.item3')}</li>
+                        <li>• {t('projects.sheepie.backend.item4')}</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-semibold text-blue-400 mb-3">
+                        {t('projects.sheepie.admin')}
+                      </h4>
+                      <ul className="space-y-2 text-sm text-gray-400">
+                        <li>• {t('projects.sheepie.admin.item1')}</li>
+                        <li>• {t('projects.sheepie.admin.item2')}</li>
+                        <li>• {t('projects.sheepie.admin.item3')}</li>
+                        <li>• {t('projects.sheepie.admin.item4')}</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-black/30 rounded-xl p-6">
+                  <h4 className="text-sm font-semibold text-gray-400 mb-4">
+                    {t('projects.sheepie.architecture')}
+                  </h4>
+                  <div className="aspect-[4/3] bg-black/50 rounded-lg p-4">
+                    {/* Simple architecture diagram placeholder */}
+                    <svg className="w-full h-full" viewBox="0 0 500 300">
+                      {/* Chatbot Engine */}
+                      <g>
+                        <rect x="20" y="20" width="200" height="60" rx="4" className="fill-purple-500/20 stroke-purple-500" strokeWidth="1" />
+                        <text x="120" y="55" textAnchor="middle" className="fill-gray-400 text-[12px]">Node.js Chatbot Engine</text>
+                      </g>
+
+                      {/* WhatsApp */}
+                      <g>
+                        <rect x="280" y="20" width="200" height="60" rx="4" className="fill-green-500/20 stroke-green-500" strokeWidth="1" />
+                        <text x="380" y="55" textAnchor="middle" className="fill-gray-400 text-[12px]">WhatsApp API</text>
+                      </g>
+
+                      {/* Admin Backoffice */}
+                      <g>
+                        <rect x="20" y="120" width="200" height="60" rx="4" className="fill-blue-500/20 stroke-blue-500" strokeWidth="1" />
+                        <text x="120" y="155" textAnchor="middle" className="fill-gray-400 text-[12px]">Laravel + Filament Admin</text>
+                      </g>
+
+                      {/* Database */}
+                      <g>
+                        <rect x="280" y="120" width="200" height="60" rx="4" className="fill-blue-500/20 stroke-blue-500" strokeWidth="1" />
+                        <text x="380" y="155" textAnchor="middle" className="fill-gray-400 text-[12px]">Database</text>
+                      </g>
+
+                      {/* Connections */}
+                      <g className="stroke-gray-600" strokeWidth="1">
+                        <line x1="220" y1="50" x2="280" y2="50" />
+                        <line x1="120" y1="80" x2="120" y2="120" />
+                        <line x1="220" y1="150" x2="280" y2="150" />
+                      </g>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
